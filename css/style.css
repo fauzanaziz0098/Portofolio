@@ -13,21 +13,10 @@
   z-index: 9999;
   mix-blend-mode: difference;
   transition: transform 0.2s ease-in-out;
-  /* transition-delay: 0.3s; */
 }
 
 .cursor-hover {
   transform: translate(-50%, -50%) scale(1.3);
-}
-
-.hero-section-left {
-  position: absolute;
-  width: 12rem;
-  height: 2rem;
-  top: -20px;
-  left: 0;
-  border-radius: 10px;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
 }
 
 .nav-custom {
@@ -41,7 +30,7 @@
   position: absolute;
   top: 0px;
   left: 12%;
-  width: 300px;
+  width: 400px;
   height: 50px;
   z-index: 100;
   border-radius: 30px;
@@ -54,6 +43,8 @@
 
 .nav-box-item {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 12px;
   gap: 5px;
   z-index: 10;
@@ -115,8 +106,18 @@
 .hero-section {
   width: 100%;
   margin-top: -3rem;
-  height: 100vh;
+  min-height: 100vh;
   background-color: white;
+}
+
+.hero-section-left {
+  position: absolute;
+  width: 12rem;
+  height: 2rem;
+  top: -20px;
+  left: 0;
+  border-radius: 10px;
+  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
 }
 
 .hero-section-image,
@@ -198,6 +199,31 @@
   z-index: 20;
 }
 
+@media (max-width: 576px) {
+  .hero-section {
+    margin-top: 0;
+  }
+  .hero-section-image {
+    background-position: top;
+  }
+  .hero-section-image::before,
+  .hero-section-image::after {
+    display: none;
+  }
+
+  .hero-section-bottom::after,
+  .hero-section-bottom::before {
+    display: none;
+  }
+  .hero-section-bottom {
+    padding-top: 0px;
+    background-color: transparent;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+  }
+}
+
 .hero-content-wrapper {
   display: flex;
   justify-content: space-between;
@@ -221,19 +247,17 @@
   line-height: 1.5;
 }
 
-/* --- ABOUT SECTION STYLING --- */
-
+/* About */
 .about-section {
   padding: 80px 0;
-  background-color: #fff; /* Light Theme Background */
+  background-color: #fff;
   overflow: hidden;
 }
 
-/* Typography Judul Utama */
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2c3e50; /* Warna gelap elegant */
+  color: #2c3e50;
   margin-bottom: 0.5rem;
 }
 
@@ -242,15 +266,14 @@
   font-size: 1.1rem;
 }
 
-/* --- FRAME KOTAK KIRI (Outer Card) --- */
 .about-card-frame {
   width: 100%;
   max-width: 450px;
-  aspect-ratio: 1 / 1; /* Membuat kotak persegi sempurna */
-  background-color: #f8f9fa; /* Abu-abu sangat muda (pengganti hitam di gambar) */
+  aspect-ratio: 1 / 1;
+  background-color: #f8f9fa;
   border-radius: 30px;
   padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Shadow halus */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -258,23 +281,18 @@
 }
 
 .about-card-frame:hover {
-  transform: translateY(-5px); /* Efek naik dikit saat hover */
+  transform: translateY(-5px);
 }
 
-/* --- KOTAK BIRU DALAM (Inner Card) --- */
 .about-avatar-box {
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    #0dcaf0,
-    #0aa2c0
-  ); /* Warna Cyan Bootstrap */
+  background: linear-gradient(135deg, #0dcaf0, #0aa2c0);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 5px 15px rgba(13, 202, 240, 0.4); /* Glow biru halus */
+  box-shadow: 0 5px 15px rgba(13, 202, 240, 0.4);
 }
 
 .avatar-initials {
@@ -284,7 +302,6 @@
   letter-spacing: -2px;
 }
 
-/* --- KOLOM KANAN (Teks) --- */
 .about-greeting {
   font-size: 2rem;
   font-weight: 700;
@@ -294,125 +311,109 @@
 
 .about-text-content p {
   color: #495057;
-  line-height: 1.8; /* Jarak antar baris agar mudah dibaca */
+  line-height: 1.8;
   margin-bottom: 1.5rem;
 }
 
-/* Responsiveness: Agar rapi di HP */
 @media (max-width: 991px) {
   .about-card-frame {
-    max-width: 350px; /* Perkecil kotak di layar tablet/HP */
+    max-width: 350px;
     margin-bottom: 30px;
   }
 
   .about-text-content {
-    text-align: center; /* Teks jadi tengah di HP */
+    text-align: center;
   }
 
   .d-flex.justify-content-lg-start {
-    justify-content: center !important; /* Kotak jadi di tengah di HP */
+    justify-content: center !important;
   }
 }
 
-/* --- SKILLS SECTION (Dark Theme Style) --- */
-/* --- SKILLS SECTION (LIGHT THEME) --- */
-
 .skills-section {
   padding: 80px 0;
-  /* Background section dibuat abu-abu sangat muda biar beda dgn section putih lainnya */
   background-color: #f8f9fa;
 }
 
 /* Kartu Skill */
 .skill-card {
-  background-color: #ffffff; /* Kartu Putih */
-  border-radius: 20px; /* Sudut membulat */
+  background-color: #ffffff;
+  border-radius: 20px;
   padding: 30px;
-  height: 100%; /* Agar tinggi kartu rata semua */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); /* Shadow halus */
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px); /* Efek melayang dikit pas hover */
+  transform: translateY(-5px);
 }
 
-/* Judul Kategori (Frontend, Backend, dll) */
 .skill-category-title {
-  color: #0dcaf0; /* Warna Cyan Bootstrap (senada dengan progress bar) */
+  color: #0dcaf0;
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 25px;
 }
 
-/* Item Skill */
 .skill-item {
   margin-bottom: 20px;
 }
 
 .skill-name {
   font-weight: 600;
-  color: #333; /* Teks Gelap */
+  color: #333;
   font-size: 0.95rem;
 }
 
 .skill-percentage {
   font-weight: 700;
-  color: #0dcaf0; /* Angka persen warna biru/cyan */
+  color: #0dcaf0;
   font-size: 0.9rem;
-  background: rgba(13, 202, 240, 0.1); /* Background tipis di angka */
+  background: rgba(13, 202, 240, 0.1);
   padding: 2px 8px;
   border-radius: 6px;
 }
 
-/* Progress Bar Custom */
 .custom-progress {
-  height: 8px; /* Lebih tipis biar elegan */
-  background-color: #e9ecef; /* Warna track abu-abu terang */
+  height: 8px;
+  background-color: #e9ecef;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .progress-bar.bg-cyan {
-  background-color: #0dcaf0; /* Warna Bar Utama */
+  background-color: #0dcaf0;
   border-radius: 10px;
-  /* Opsional: Tambah gradasi biar makin modern */
   background: linear-gradient(90deg, #0dcaf0, #0aa2c0);
 }
 
 /* projek */
-
-/* --- PROJECTS SECTION (LIGHT THEME) --- */
-
 .projects-section {
   padding: 80px 0;
-  background-color: #ffffff; /* Background putih bersih */
+  background-color: #ffffff;
 }
 
-/* Container Kartu */
 .project-card {
   background-color: #fff;
   border-radius: 16px;
-  overflow: hidden; /* Supaya gradient tidak keluar dari radius */
+  overflow: hidden;
   height: 100%;
-  border: 1px solid #f0f0f0; /* Garis tepi sangat halus */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Shadow lembut */
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efek Hover: Kartu naik sedikit */
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Area Gambar (Gradient Placeholder) */
 .project-img-gradient {
   height: 200px;
   width: 100%;
 }
 
-/* Pilihan Warna Gradient (Sesuai Referensi tapi Cerah) */
 .gradient-blue {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
@@ -437,32 +438,29 @@
 
 .project-desc {
   font-size: 0.95rem;
-  color: #6c757d; /* Abu-abu teks */
+  color: #6c757d;
   line-height: 1.6;
   margin-bottom: 20px;
 
-  /* Membatasi teks maksimal 3 baris (opsional) */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* Area Tags Teknologi */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px; /* Jarak antar tag */
+  gap: 8px;
 }
 
-/* Styling Pill/Tag */
 .tech-tag {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #0dcaf0; /* Teks Biru Cyan */
-  background-color: rgba(13, 202, 240, 0.1); /* Background Cyan Transparan */
+  color: #0dcaf0;
+  background-color: rgba(13, 202, 240, 0.1);
   padding: 6px 14px;
-  border-radius: 50px; /* Bentuk Pill */
+  border-radius: 50px;
   transition: background 0.2s ease;
 }
 
@@ -472,14 +470,11 @@
 }
 
 /* kontak */
-/* --- CONTACT SECTION (Light Theme) --- */
-
 .contact-section {
   padding: 80px 0;
-  background-color: #f8f9fa; /* Background Halaman Abu Muda */
+  background-color: #f8f9fa;
 }
 
-/* --- KARTU INFO KIRI (Email, Phone, Loc) --- */
 .info-card {
   background-color: #ffffff;
   padding: 20px;
@@ -487,7 +482,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* Shadow halus */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   border: 1px solid #eee;
   transition: transform 0.2s;
 }
@@ -499,8 +494,8 @@
 .icon-circle {
   width: 45px;
   height: 45px;
-  background-color: rgba(13, 202, 240, 0.1); /* Biru Muda Transparan */
-  color: #0dcaf0; /* Ikon Biru Muda */
+  background-color: rgba(13, 202, 240, 0.1);
+  color: #0dcaf0;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -599,36 +594,4 @@
 .btn-send:hover {
   background-color: #0aa2c0;
   transform: translateY(-2px);
-}
-
-/* ... CSS Footer sebelumnya ... */
-
-/* Tombol Social Media */
-.social-btn {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  color: #495057;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* TAMBAHAN BARU: Mengatur ukuran icon Font Awesome */
-  font-size: 1.2rem;
-
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-/* Efek Hover tetap sama */
-.social-btn:hover {
-  background-color: #0dcaf0;
-  color: #fff;
-  border-color: #0dcaf0;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(13, 202, 240, 0.3);
 }

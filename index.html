@@ -20,7 +20,49 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="nav-custom">
+    <nav
+      class="navbar navbar-expand-sm navbar-light bg-white fixed-top shadow-sm d-sm-none"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#"
+          >Portfolio<span style="color: #0dcaf0">.</span></a
+        >
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse mt-3" id="mobileMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="nav-custom d-none d-sm-block">
       <div class="nav-box">
         <div class="nav-box-left"></div>
         <div class="nav-box-right"></div>
@@ -28,12 +70,12 @@
           <a class="nav-cust-link active" href="#home">Home</a>
           <a class="nav-cust-link" href="#about">About</a>
           <a class="nav-cust-link" href="#skills">Skills</a>
+          <a class="nav-cust-link" href="#projects">Project</a>
           <a class="nav-cust-link" href="#contact">Contact</a>
         </div>
       </div>
     </nav>
-
-    <header class="hero-section">
+    <header id="home" class="hero-section overflow-hidden">
       <div class="hero-section-image"></div>
       <div class="hero-section-bottom">
         <div class="mt-5 px-3">
@@ -46,7 +88,6 @@
             <p class="hero-desc">
               <strong>Web Programming Student</strong><br />
               Specialized in ReactJs, NextJs, Laravel, & Nestjs.<br />
-              Turning complex logic into clean designs.
             </p>
           </div>
         </div>
@@ -56,7 +97,6 @@
     <main>
       <section id="about" class="about-section">
         <div class="container">
-          <!-- Judul Section -->
           <div class="row mb-5">
             <div class="col-12 text-center">
               <h2 class="section-title">About Me</h2>
@@ -67,9 +107,7 @@
             </div>
           </div>
 
-          <!-- Konten Utama: Kiri (Card) & Kanan (Teks) -->
           <div class="row align-items-center gy-5">
-            <!-- Kolom Kiri: Kotak Inisial/Foto -->
             <div
               class="col-lg-6 d-flex justify-content-center justify-content-lg-start"
             >
@@ -80,12 +118,11 @@
               </div>
             </div>
 
-            <!-- Kolom Kanan: Deskripsi -->
             <div class="col-lg-6">
               <div class="about-text-content">
-                <h3 class="about-greeting">Hi, I'm Your Name</h3>
+                <h3 class="about-greeting">Hi, I'm Fauzan Aziz</h3>
                 <p class="lead text-muted">
-                  I'm a full-stack developer with a passion for building
+                  I'm a junior full-stack developer with a passion for building
                   beautiful and functional web applications.
                 </p>
                 <p>
@@ -93,13 +130,7 @@
                   specialize in creating responsive, user-friendly interfaces
                   that deliver exceptional user experiences.
                 </p>
-                <p>
-                  When I'm not coding, you can find me exploring new
-                  technologies, contributing to open-source projects, or sharing
-                  knowledge with the developer community.
-                </p>
 
-                <!-- Opsional: Tombol Action -->
                 <a
                   href="#contact"
                   class="btn btn-dark mt-3 px-4 py-2 rounded-pill"
@@ -139,21 +170,39 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">Bootstrap 5</span>
-                    <span class="skill-percentage">85%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div class="progress-bar bg-cyan" style="width: 85%"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between mb-1">
                     <span class="skill-name">JavaScript</span>
                     <span class="skill-percentage">75%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 75%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="skill-name">ReactJs</span>
+                    <span class="skill-percentage">70%</span>
+                  </div>
+                  <div class="progress custom-progress">
+                    <div class="progress-bar bg-cyan" style="width: 70%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="skill-name">Next.JS</span>
+                    <span class="skill-percentage">75%</span>
+                  </div>
+                  <div class="progress custom-progress">
+                    <div class="progress-bar bg-cyan" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="skill-name">Tailwind CSS</span>
+                    <span class="skill-percentage">80%</span>
+                  </div>
+                  <div class="progress custom-progress">
+                    <div class="progress-bar bg-cyan" style="width: 80%"></div>
                   </div>
                 </div>
               </div>
@@ -165,17 +214,17 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">PHP (OOP)</span>
-                    <span class="skill-percentage">80%</span>
+                    <span class="skill-name">NestJS</span>
+                    <span class="skill-percentage">60%</span>
                   </div>
                   <div class="progress custom-progress">
-                    <div class="progress-bar bg-cyan" style="width: 80%"></div>
+                    <div class="progress-bar bg-cyan" style="width: 60%"></div>
                   </div>
                 </div>
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">Laravel Framework</span>
+                    <span class="skill-name">Laravel</span>
                     <span class="skill-percentage">70%</span>
                   </div>
                   <div class="progress custom-progress">
@@ -248,7 +297,42 @@
           <div class="row g-4">
             <div class="col-md-6 col-lg-4">
               <div class="project-card">
-                <div class="project-img-gradient gradient-blue"></div>
+                <div
+                  class="project-img-gradient gradient-blue"
+                  style="
+                    background-image: url(/images/website1.png);
+                    object-fit: cover;
+                    background-size: cover;
+                  "
+                ></div>
+
+                <div class="project-body">
+                  <h3 class="project-title">Website Cafe Order Management</h3>
+                  <p class="project-desc">
+                    An integrated web solution for contactless ordering in
+                    coffee shops
+                  </p>
+
+                  <div class="project-tags">
+                    <span class="tech-tag">Laravel 10</span>
+                    <span class="tech-tag">Next.JS</span>
+                    <span class="tech-tag">Tawilwind CSS</span>
+                    <span class="tech-tag">MySQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="project-card">
+                <div
+                  class="project-img-gradient gradient-blue"
+                  style="
+                    background-image: url(/images/website2.png);
+                    object-fit: cover;
+                    background-size: cover;
+                  "
+                ></div>
 
                 <div class="project-body">
                   <h3 class="project-title">Sistem Informasi Akademik</h3>
@@ -268,7 +352,14 @@
 
             <div class="col-md-6 col-lg-4">
               <div class="project-card">
-                <div class="project-img-gradient gradient-purple"></div>
+                <div
+                  class="project-img-gradient gradient-purple"
+                  style="
+                    background-image: url(/images/network.png);
+                    object-fit: cover;
+                    background-size: cover;
+                  "
+                ></div>
 
                 <div class="project-body">
                   <h3 class="project-title">Campus Network Design</h3>
@@ -282,26 +373,6 @@
                     <span class="tech-tag">Cisco Packet Tracer</span>
                     <span class="tech-tag">Mikrotik</span>
                     <span class="tech-tag">GNS3</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="project-card">
-                <div class="project-img-gradient gradient-orange"></div>
-
-                <div class="project-body">
-                  <h3 class="project-title">Modern Portfolio Builder</h3>
-                  <p class="project-desc">
-                    A responsive personal portfolio website with custom
-                    interactive UI components and clean code structure.
-                  </p>
-
-                  <div class="project-tags">
-                    <span class="tech-tag">HTML5</span>
-                    <span class="tech-tag">CSS3</span>
-                    <span class="tech-tag">JavaScript</span>
                   </div>
                 </div>
               </div>
@@ -329,69 +400,27 @@
               <div class="d-flex flex-column gap-3">
                 <div class="info-card">
                   <div class="icon-circle">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect width="20" height="16" x="2" y="4" rx="2" />
-                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                    </svg>
+                    <i class="fa-solid fa-envelope"></i>
                   </div>
                   <div>
                     <div class="info-label">Email</div>
-                    <div class="info-value">your@email.com</div>
+                    <div class="info-value">fauzanaziz394@gmail.com</div>
                   </div>
                 </div>
 
                 <div class="info-card">
                   <div class="icon-circle">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                      />
-                    </svg>
+                    <i class="fa-solid fa-phone"></i>
                   </div>
                   <div>
                     <div class="info-label">Phone</div>
-                    <div class="info-value">+62 812 3456 7890</div>
+                    <div class="info-value">+62 838 9535 7387</div>
                   </div>
                 </div>
 
                 <div class="info-card">
                   <div class="icon-circle">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
-                      />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
+                    <i class="fa-solid fa-location-dot"></i>
                   </div>
                   <div>
                     <div class="info-label">Location</div>
@@ -463,19 +492,27 @@
 
           <div class="footer-right">
             <div class="social-icons-wrapper d-flex gap-4">
-              <a href="#" class="social-btn" aria-label="GitHub">
+              <a
+                href="https://github.com/fauzanaziz0098"
+                class="social-btn"
+                aria-label="GitHub"
+              >
                 <i class="fa-brands fa-github"></i>
               </a>
 
-              <a href="#" class="social-btn" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
+              <a
+                href="https://www.instagram.com/fauzanaziz394/"
+                class="social-btn"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
               </a>
 
-              <a href="#" class="social-btn" aria-label="Twitter">
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
-
-              <a href="#" class="social-btn" aria-label="Email">
+              <a
+                href="mailto:fauzanaziz394@gmail.com"
+                class="social-btn"
+                aria-label="Email"
+              >
                 <i class="fa-solid fa-envelope"></i>
               </a>
             </div>
