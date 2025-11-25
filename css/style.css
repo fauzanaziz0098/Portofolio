@@ -122,7 +122,7 @@
 .hero-section-image,
 .hero-section-image::before,
 .hero-section-image::after {
-  background-image: url(/PortfolioNew/images/warrior2.png);
+  background-image: url(/images/warrior2.png);
   background-attachment: fixed;
   background-position: right;
   background-size: cover;
@@ -221,78 +221,414 @@
   line-height: 1.5;
 }
 
-.hero-scroll {
-  position: absolute;
-  left: 50%;
-  top: 20px;
-  transform: translateX(-50%);
+/* --- ABOUT SECTION STYLING --- */
+
+.about-section {
+  padding: 80px 0;
+  background-color: #fff; /* Light Theme Background */
+  overflow: hidden;
 }
 
-.scroll-circle {
-  width: 100px;
-  height: 100px;
-  border: 1px solid #ddd;
-  border-radius: 50%;
+/* Typography Judul Utama */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50; /* Warna gelap elegant */
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* --- FRAME KOTAK KIRI (Outer Card) --- */
+.about-card-frame {
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1 / 1; /* Membuat kotak persegi sempurna */
+  background-color: #f8f9fa; /* Abu-abu sangat muda (pengganti hitam di gambar) */
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Shadow halus */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.about-card-frame:hover {
+  transform: translateY(-5px); /* Efek naik dikit saat hover */
+}
+
+/* --- KOTAK BIRU DALAM (Inner Card) --- */
+.about-avatar-box {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #0dcaf0,
+    #0aa2c0
+  ); /* Warna Cyan Bootstrap */
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(13, 202, 240, 0.4); /* Glow biru halus */
+}
+
+.avatar-initials {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -2px;
+}
+
+/* --- KOLOM KANAN (Teks) --- */
+.about-greeting {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 1.5rem;
+}
+
+.about-text-content p {
+  color: #495057;
+  line-height: 1.8; /* Jarak antar baris agar mudah dibaca */
+  margin-bottom: 1.5rem;
+}
+
+/* Responsiveness: Agar rapi di HP */
+@media (max-width: 991px) {
+  .about-card-frame {
+    max-width: 350px; /* Perkecil kotak di layar tablet/HP */
+    margin-bottom: 30px;
+  }
+
+  .about-text-content {
+    text-align: center; /* Teks jadi tengah di HP */
+  }
+
+  .d-flex.justify-content-lg-start {
+    justify-content: center !important; /* Kotak jadi di tengah di HP */
+  }
+}
+
+/* --- SKILLS SECTION (Dark Theme Style) --- */
+/* --- SKILLS SECTION (LIGHT THEME) --- */
+
+.skills-section {
+  padding: 80px 0;
+  /* Background section dibuat abu-abu sangat muda biar beda dgn section putih lainnya */
+  background-color: #f8f9fa;
+}
+
+/* Kartu Skill */
+.skill-card {
+  background-color: #ffffff; /* Kartu Putih */
+  border-radius: 20px; /* Sudut membulat */
+  padding: 30px;
+  height: 100%; /* Agar tinggi kartu rata semua */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); /* Shadow halus */
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px); /* Efek melayang dikit pas hover */
+}
+
+/* Judul Kategori (Frontend, Backend, dll) */
+.skill-category-title {
+  color: #0dcaf0; /* Warna Cyan Bootstrap (senada dengan progress bar) */
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+/* Item Skill */
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: #333; /* Teks Gelap */
+  font-size: 0.95rem;
+}
+
+.skill-percentage {
+  font-weight: 700;
+  color: #0dcaf0; /* Angka persen warna biru/cyan */
+  font-size: 0.9rem;
+  background: rgba(13, 202, 240, 0.1); /* Background tipis di angka */
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* Progress Bar Custom */
+.custom-progress {
+  height: 8px; /* Lebih tipis biar elegan */
+  background-color: #e9ecef; /* Warna track abu-abu terang */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar.bg-cyan {
+  background-color: #0dcaf0; /* Warna Bar Utama */
+  border-radius: 10px;
+  /* Opsional: Tambah gradasi biar makin modern */
+  background: linear-gradient(90deg, #0dcaf0, #0aa2c0);
+}
+
+/* projek */
+
+/* --- PROJECTS SECTION (LIGHT THEME) --- */
+
+.projects-section {
+  padding: 80px 0;
+  background-color: #ffffff; /* Background putih bersih */
+}
+
+/* Container Kartu */
+.project-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden; /* Supaya gradient tidak keluar dari radius */
+  height: 100%;
+  border: 1px solid #f0f0f0; /* Garis tepi sangat halus */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Shadow lembut */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek Hover: Kartu naik sedikit */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Area Gambar (Gradient Placeholder) */
+.project-img-gradient {
+  height: 200px;
+  width: 100%;
+}
+
+/* Pilihan Warna Gradient (Sesuai Referensi tapi Cerah) */
+.gradient-blue {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+.gradient-purple {
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+}
+.gradient-orange {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+
+/* Area Isi Konten */
+.project-body {
+  padding: 25px;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #6c757d; /* Abu-abu teks */
+  line-height: 1.6;
+  margin-bottom: 20px;
+
+  /* Membatasi teks maksimal 3 baris (opsional) */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Area Tags Teknologi */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Jarak antar tag */
+}
+
+/* Styling Pill/Tag */
+.tech-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0dcaf0; /* Teks Biru Cyan */
+  background-color: rgba(13, 202, 240, 0.1); /* Background Cyan Transparan */
+  padding: 6px 14px;
+  border-radius: 50px; /* Bentuk Pill */
+  transition: background 0.2s ease;
+}
+
+.tech-tag:hover {
+  background-color: #0dcaf0;
+  color: #fff;
+}
+
+/* kontak */
+/* --- CONTACT SECTION (Light Theme) --- */
+
+.contact-section {
+  padding: 80px 0;
+  background-color: #f8f9fa; /* Background Halaman Abu Muda */
+}
+
+/* --- KARTU INFO KIRI (Email, Phone, Loc) --- */
+.info-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* Shadow halus */
+  border: 1px solid #eee;
+  transition: transform 0.2s;
+}
+
+.info-card:hover {
+  transform: translateX(5px);
+}
+
+.icon-circle {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(13, 202, 240, 0.1); /* Biru Muda Transparan */
+  color: #0dcaf0; /* Ikon Biru Muda */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* --- KARTU "WHY WORK WITH ME" --- */
+.why-card {
+  background-color: #ffffff; /* Bisa diganti #212529 jika mau dark accent */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eee;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.why-list li::before {
+  content: "•";
+  color: #0dcaf0;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+/* --- KARTU FORM KANAN --- */
+.form-card-wrapper {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  height: 100%; /* Agar tinggi menyesuaikan */
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Inputan Light Theme */
+.custom-input {
+  background-color: #f8f9fa; /* Input abu-abu muda */
+  border: 1px solid #e9ecef;
+  color: #333;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.custom-input:focus {
+  background-color: #fff;
+  border-color: #0dcaf0;
+  box-shadow: 0 0 0 4px rgba(13, 202, 240, 0.1);
+}
+
+.custom-input::placeholder {
+  color: #adb5bd;
+}
+
+/* Tombol Send */
+.btn-send {
+  background-color: #0dcaf0;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.btn-send:hover {
+  background-color: #0aa2c0;
+  transform: translateY(-2px);
+}
+
+/* ... CSS Footer sebelumnya ... */
+
+/* Tombol Social Media */
+.social-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  color: #495057;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* TAMBAHAN BARU: Mengatur ukuran icon Font Awesome */
+  font-size: 1.2rem;
+
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.scroll-circle span {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
-  color: #333;
-}
-
-.scroll-circle svg {
-  animation: bounce 2s infinite;
-}
-
-.scroll-circle:hover {
-  border-color: #000;
-  transform: scale(1.05);
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(5px);
-  }
-  60% {
-    transform: translateY(3px);
-  }
-}
-
-.hero-socials {
-  position: absolute;
-  bottom: 0;
-  right: -150px;
-  display: flex;
-  gap: 15px;
-}
-
-.hero-socials {
-  position: fixed;
-  bottom: 40px;
-  right: 5%;
-  z-index: 20;
-}
-
-.hero-socials a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 14px;
+/* Efek Hover tetap sama */
+.social-btn:hover {
+  background-color: #0dcaf0;
+  color: #fff;
+  border-color: #0dcaf0;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(13, 202, 240, 0.3);
 }
