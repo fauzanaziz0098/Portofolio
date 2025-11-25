@@ -44,7 +44,12 @@
 * {
   cursor: none !important;
 }
-
+html,
+body {
+  overflow-x: hidden; /* Mencegah scroll ke samping */
+  /* width: 100%; */
+  /* position: relative; */
+}
 body {
   background-color: var(--bg-body);
   color: var(--text-secondary);
