@@ -12,8 +12,8 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -25,7 +25,7 @@
     >
       <div class="container">
         <a class="navbar-brand fw-bold" href="#"
-          >Portfolio<span style="color: #0dcaf0">.</span></a
+          >Portfolio<span class="text-primary">.</span></a
         >
 
         <button
@@ -75,7 +75,8 @@
         </div>
       </div>
     </nav>
-    <header id="home" class="hero-section overflow-hidden">
+
+    <header id="home" class="hero-section overflow-hidden hidden-fade-up">
       <div class="hero-section-image"></div>
       <div class="hero-section-bottom">
         <div class="mt-5 px-3">
@@ -98,7 +99,7 @@
       <section id="about" class="about-section">
         <div class="container">
           <div class="row mb-5">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center hidden-fade-up">
               <h2 class="section-title">About Me</h2>
               <p class="section-subtitle">
                 Passionate developer with a love for creating exceptional
@@ -109,7 +110,7 @@
 
           <div class="row align-items-center gy-5">
             <div
-              class="col-lg-6 d-flex justify-content-center justify-content-lg-start"
+              class="col-lg-6 d-flex justify-content-center justify-content-lg-start hidden-fade-right"
             >
               <div class="about-card-frame">
                 <div class="about-avatar-box">
@@ -118,7 +119,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 hidden-fade-left">
               <div class="about-text-content">
                 <h3 class="about-greeting">Hi, I'm Fauzan Aziz</h3>
                 <p class="lead text-muted">
@@ -130,7 +131,6 @@
                   specialize in creating responsive, user-friendly interfaces
                   that deliver exceptional user experiences.
                 </p>
-
                 <a
                   href="#contact"
                   class="btn btn-dark mt-3 px-4 py-2 rounded-pill"
@@ -145,7 +145,7 @@
       <section id="skills" class="skills-section">
         <div class="container">
           <div class="row mb-5">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center hidden-fade-up">
               <h2 class="section-title">Skills & Expertise</h2>
               <p class="section-subtitle">
                 Technologies and tools I work with during my studies
@@ -154,14 +154,14 @@
           </div>
 
           <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 hidden-fade-up delay-100">
               <div class="skill-card">
                 <h3 class="skill-category-title">Frontend</h3>
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">HTML & CSS</span>
-                    <span class="skill-percentage">90%</span>
+                    <span class="skill-name">HTML & CSS</span
+                    ><span class="skill-percentage">90%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 90%"></div>
@@ -170,8 +170,8 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">JavaScript</span>
-                    <span class="skill-percentage">75%</span>
+                    <span class="skill-name">JavaScript</span
+                    ><span class="skill-percentage">75%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 75%"></div>
@@ -180,26 +180,28 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">ReactJs</span>
-                    <span class="skill-percentage">70%</span>
+                    <span class="skill-name">ReactJs</span
+                    ><span class="skill-percentage">70%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 70%"></div>
                   </div>
                 </div>
+
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">Next.JS</span>
-                    <span class="skill-percentage">75%</span>
+                    <span class="skill-name">Next.JS</span
+                    ><span class="skill-percentage">75%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 75%"></div>
                   </div>
                 </div>
+
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">Tailwind CSS</span>
-                    <span class="skill-percentage">80%</span>
+                    <span class="skill-name">Tailwind CSS</span
+                    ><span class="skill-percentage">80%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 80%"></div>
@@ -208,14 +210,14 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 hidden-fade-up delay-200">
               <div class="skill-card">
                 <h3 class="skill-category-title">Backend</h3>
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">NestJS</span>
-                    <span class="skill-percentage">60%</span>
+                    <span class="skill-name">NestJS</span
+                    ><span class="skill-percentage">60%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 60%"></div>
@@ -224,8 +226,8 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">Laravel</span>
-                    <span class="skill-percentage">70%</span>
+                    <span class="skill-name">Laravel</span
+                    ><span class="skill-percentage">70%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 70%"></div>
@@ -234,24 +236,34 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">MySQL / MariaDB</span>
-                    <span class="skill-percentage">75%</span>
+                    <span class="skill-name">MySQL / MariaDB</span
+                    ><span class="skill-percentage">75%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 75%"></div>
                   </div>
                 </div>
+
+                <div class="skill-item">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="skill-name">PostgreSQL</span
+                    ><span class="skill-percentage">60%</span>
+                  </div>
+                  <div class="progress custom-progress">
+                    <div class="progress-bar bg-cyan" style="width: 60%"></div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 hidden-fade-up delay-300">
               <div class="skill-card">
                 <h3 class="skill-category-title">Tools & Others</h3>
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">Git & GitHub</span>
-                    <span class="skill-percentage">85%</span>
+                    <span class="skill-name">Git & GitHub</span
+                    ><span class="skill-percentage">85%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 85%"></div>
@@ -260,8 +272,8 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">Linux (Debian)</span>
-                    <span class="skill-percentage">70%</span>
+                    <span class="skill-name">Linux (Debian)</span
+                    ><span class="skill-percentage">70%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 70%"></div>
@@ -270,8 +282,8 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between mb-1">
-                    <span class="skill-name">Networking (Mikrotik/Cisco)</span>
-                    <span class="skill-percentage">65%</span>
+                    <span class="skill-name">Networking (Mikrotik/Cisco)</span
+                    ><span class="skill-percentage">65%</span>
                   </div>
                   <div class="progress custom-progress">
                     <div class="progress-bar bg-cyan" style="width: 65%"></div>
@@ -285,7 +297,7 @@
 
       <section id="projects" class="projects-section">
         <div class="container">
-          <div class="row mb-5">
+          <div class="row mb-5 hidden-fade-up">
             <div class="col-12 text-center">
               <h2 class="section-title">Featured Projects</h2>
               <p class="section-subtitle">
@@ -295,7 +307,7 @@
           </div>
 
           <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 hidden-fade-up delay-100">
               <div class="project-card">
                 <div
                   class="project-img-gradient gradient-blue"
@@ -305,14 +317,12 @@
                     background-size: cover;
                   "
                 ></div>
-
                 <div class="project-body">
                   <h3 class="project-title">Website Cafe Order Management</h3>
                   <p class="project-desc">
                     An integrated web solution for contactless ordering in
                     coffee shops
                   </p>
-
                   <div class="project-tags">
                     <span class="tech-tag">Laravel 10</span>
                     <span class="tech-tag">Next.JS</span>
@@ -323,7 +333,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 hidden-fade-up delay-200">
               <div class="project-card">
                 <div
                   class="project-img-gradient gradient-blue"
@@ -333,14 +343,12 @@
                     background-size: cover;
                   "
                 ></div>
-
                 <div class="project-body">
                   <h3 class="project-title">Sistem Informasi Akademik</h3>
                   <p class="project-desc">
                     A comprehensive academic information system built with MVC
                     architecture, managing student data, grades, and schedules.
                   </p>
-
                   <div class="project-tags">
                     <span class="tech-tag">Laravel 10</span>
                     <span class="tech-tag">MySQL</span>
@@ -350,7 +358,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 hidden-fade-up delay-300">
               <div class="project-card">
                 <div
                   class="project-img-gradient gradient-purple"
@@ -360,7 +368,6 @@
                     background-size: cover;
                   "
                 ></div>
-
                 <div class="project-body">
                   <h3 class="project-title">Campus Network Design</h3>
                   <p class="project-desc">
@@ -368,7 +375,6 @@
                     university campus using VLANs, OSPF routing, and firewall
                     rules.
                   </p>
-
                   <div class="project-tags">
                     <span class="tech-tag">Cisco Packet Tracer</span>
                     <span class="tech-tag">Mikrotik</span>
@@ -383,7 +389,7 @@
 
       <section id="contact" class="contact-section">
         <div class="container">
-          <div class="row mb-5">
+          <div class="row mb-5 hidden-fade-up">
             <div class="col-12 text-center">
               <h2 class="section-title">Get In Touch</h2>
               <p class="section-subtitle">
@@ -394,7 +400,7 @@
           </div>
 
           <div class="row g-4">
-            <div class="col-lg-5 d-flex flex-column gap-3">
+            <div class="col-lg-5 d-flex flex-column gap-3 hidden-fade-right">
               <h3 class="fw-bold mb-2 text-dark">Contact Information</h3>
 
               <div class="d-flex flex-column gap-3">
@@ -440,7 +446,7 @@
               </div>
             </div>
 
-            <div class="col-lg-7">
+            <div class="col-lg-7 hidden-fade-left">
               <div class="form-card-wrapper">
                 <form>
                   <div class="mb-3">
@@ -496,30 +502,26 @@
                 href="https://github.com/fauzanaziz0098"
                 class="social-btn"
                 aria-label="GitHub"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-
+                ><i class="fa-brands fa-github"></i
+              ></a>
               <a
                 href="https://www.instagram.com/fauzanaziz394/"
                 class="social-btn"
                 aria-label="Instagram"
-              >
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
               <a
                 href="mailto:fauzanaziz394@gmail.com"
                 class="social-btn"
                 aria-label="Email"
-              >
-                <i class="fa-solid fa-envelope"></i>
-              </a>
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
     </footer>
+
     <div class="custom-cursor"></div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

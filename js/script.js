@@ -25,3 +25,28 @@ navLinks.forEach((link) => {
     this.classList.add("active");
   });
 });
+
+// animation scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.6,
+  };
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show-animate");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  const hiddenElements = document.querySelectorAll(
+    ".hidden-fade-up, .hidden-fade-left, .hidden-fade-right"
+  );
+
+  hiddenElements.forEach((el) => observer.observe(el));
+});
