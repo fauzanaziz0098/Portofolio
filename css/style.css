@@ -200,7 +200,7 @@ a {
 .hero-section-image,
 .hero-section-image::before,
 .hero-section-image::after {
-  background-image: url(/images/hero2.png);
+  background-image: url(../images/hero2.png);
   background-attachment: fixed;
   background-position: right;
   background-size: cover;
